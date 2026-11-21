@@ -3,192 +3,143 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
-<title>Anak Negeri Sembilan UPSI | Koleksi Korporat</title>
+<meta name="theme-color" content="#080808">
+<title>Anak Negeri Sembilan UPSI | Baju Korporat</title>
 <style>
-:root{--gold:#d8a93b;--red:#a61e32;--cream:#f4f0e7;--muted:#a9a39a}
+:root{--gold:#d8a83b;--red:#a71e32;--cream:#f4f0e7;--muted:#aaa39a}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#090909;color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background:radial-gradient(ellipse at 72% 42%,#8b662322,transparent 40%),linear-gradient(132deg,transparent 0 76%,#a51f321b 76.1% 76.4%,transparent 76.5%)}
-.page{position:relative;z-index:1;min-height:100vh}
-header{height:82px;padding:0 clamp(20px,6vw,90px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 68% 44%,#27211a 0,#111112 42%,#080809 78%);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background:linear-gradient(135deg,transparent 0 80%,#a71e32 80.1% 80.4%,transparent 80.5%),linear-gradient(135deg,transparent 0 85%,#d8a83b 85.1% 85.4%,transparent 85.5%)}
+.page{position:relative;z-index:1;overflow:hidden}
+header{height:82px;padding:0 clamp(20px,6vw,88px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18}
 .brand{color:var(--gold);font-size:10px;font-weight:bold;letter-spacing:3px}
-.brand b{display:block;color:#f5f0e6;font-size:13px;letter-spacing:2px;margin-top:5px}
-nav{display:flex;gap:27px;font-size:9px;letter-spacing:2px;color:#aaa;text-transform:uppercase}
-nav a{color:inherit;text-decoration:none}
-main{max-width:1400px;margin:auto;padding:36px clamp(18px,4vw,56px) 40px}
-.heading{text-align:center;margin:8px 0 5px}
-.eyebrow{font-size:9px;letter-spacing:4px;color:var(--gold);font-weight:bold}
-h1{font:clamp(32px,4.2vw,54px)/1.1 Georgia,serif;font-weight:400;margin:15px 0 9px;letter-spacing:.2px}
-h1 span{color:var(--gold);font-style:italic}
-.sub{color:#a6a19a;font-size:12px;line-height:1.7;max-width:680px;margin:0 auto}
-.rule{width:88px;height:2px;background:linear-gradient(90deg,var(--gold) 0 68%,var(--red) 68%);margin:22px auto}
-.showcase{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,1.1fr);gap:30px;align-items:center;margin-top:10px}
-.copy{padding:18px 18px 18px 3vw}
-.copy .kicker{color:var(--gold);font-size:9px;letter-spacing:3px;font-weight:bold}
-.copy h2{font:clamp(30px,3.7vw,48px)/1.12 Georgia,serif;font-weight:400;margin:18px 0}
-.copy h2 em{color:var(--gold);font-weight:400}
-.copy p{max-width:410px;color:#aaa49c;font-size:13px;line-height:1.9}
-.specs{display:flex;gap:30px;flex-wrap:wrap;margin-top:28px}
-.spec small{display:block;font-size:9px;letter-spacing:2px;color:#777168}
-.spec strong{display:block;font-size:11px;letter-spacing:1px;color:#f4eee2;margin-top:7px}
-.viewer{position:relative;min-height:570px;display:grid;place-items:center;isolation:isolate}
-.ring{position:absolute;width:min(90%,540px);aspect-ratio:1;border:1px solid #d8a93b33;border-radius:50%;box-shadow:0 0 90px #d8a93b0d,inset 0 0 70px #d8a93b08}
-.ring:before,.ring:after{content:"";position:absolute;inset:8%;border:1px solid #ffffff12;border-radius:50%}
-.ring:after{inset:-8%;border-color:#a61e3230}
-.floor{position:absolute;bottom:76px;width:68%;height:35px;background:#000;border-radius:50%;filter:blur(17px);box-shadow:0 0 40px 13px #000}
-#scene{width:100%;height:570px;position:relative;z-index:2;touch-action:pan-y;cursor:grab}
-#scene:active{cursor:grabbing}
-.fallback{position:absolute;width:min(76%,390px);height:475px;z-index:1;display:grid;place-items:center}
-.fallback img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 25px 25px #000b)}
-.controls{position:absolute;bottom:0;display:flex;gap:8px;justify-content:center;z-index:4;flex-wrap:wrap;width:100%}
-button{background:#111;border:1px solid #d8a93b72;color:#f0dfb8;padding:12px 16px;font-size:9px;letter-spacing:1.3px;cursor:pointer;border-radius:2px;transition:.2s}
-button:hover{background:#2a2114;border-color:var(--gold)}
-.hint{position:absolute;top:18px;right:16px;z-index:4;color:#777168;font-size:8px;letter-spacing:2px;writing-mode:vertical-rl}
-.caption{position:absolute;bottom:-22px;text-align:center;width:100%;font-size:9px;letter-spacing:2px;color:#777168;text-transform:uppercase}
-.note{max-width:1050px;margin:24px auto 0;padding:17px 22px;border-top:1px solid #ffffff17;border-bottom:1px solid #ffffff17;display:flex;justify-content:space-between;gap:20px;align-items:center}
-.note strong{font:20px Georgia,serif;font-weight:400}
-.note span{font-size:9px;color:var(--gold);letter-spacing:2px}
-footer{padding:23px 6vw 27px;display:flex;justify-content:space-between;gap:20px;color:#6e6961;font-size:9px;letter-spacing:1.8px}
-@media(max-width:880px){main{padding-top:27px}.showcase{grid-template-columns:1fr;gap:0}.copy{text-align:center;padding:20px 10px 0}.copy p{margin:auto}.specs{justify-content:center}.viewer{min-height:540px}#scene{height:540px}.fallback{height:440px;width:min(75%,360px)}}
-@media(max-width:560px){header{height:70px}nav{display:none}.brand{font-size:9px}.brand b{font-size:11px}main{padding:26px 14px 32px}h1{font-size:36px}.sub{font-size:11px}.copy h2{font-size:34px}.viewer{min-height:440px}#scene{height:440px}.fallback{height:350px;width:min(83%,310px)}.controls{bottom:0;gap:5px}.controls button{padding:10px 11px;font-size:8px}.note{flex-direction:column;text-align:center}.caption{font-size:8px}footer{flex-direction:column;text-align:center}}
+.brand b{display:block;color:var(--cream);font-size:13px;letter-spacing:2px;margin-top:5px}
+.nav{display:flex;gap:28px;color:#a9a39a;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+.nav a{color:inherit;text-decoration:none}
+main{max-width:1400px;margin:auto;padding:40px clamp(18px,5vw,68px) 35px}
+.heading{text-align:center;margin:5px auto 16px}
+.eyebrow{color:var(--gold);font-size:10px;font-weight:bold;letter-spacing:4px}
+h1{font:clamp(32px,4.4vw,57px)/1.08 Georgia,serif;font-weight:400;letter-spacing:.1px;margin:14px 0 9px}
+h1 em{color:var(--gold);font-style:italic}
+.intro{font-size:13px;line-height:1.8;color:#aaa49b;max-width:700px;margin:0 auto}
+.accent{width:96px;height:2px;margin:21px auto;background:linear-gradient(90deg,var(--gold) 0 68%,var(--red) 68%)}
+.showcase{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:center;max-width:1180px;margin:18px auto 0}
+.copy{padding:20px 10px 28px 2vw}
+.copy .eyebrow{font-size:9px;letter-spacing:3px}
+.copy h2{font:clamp(34px,4.3vw,55px)/1.13 Georgia,serif;font-weight:400;margin:18px 0}
+.copy h2 span{color:var(--gold);font-style:italic}
+.copy p{max-width:410px;color:#aaa49b;font-size:13px;line-height:1.9}
+.rule{width:86px;height:2px;background:linear-gradient(90deg,var(--gold),var(--red));margin:27px 0}
+.specs{display:flex;gap:28px;flex-wrap:wrap}
+.spec small{display:block;color:#777168;font-size:9px;letter-spacing:2px}
+.spec strong{display:block;color:#f3eee5;font-size:11px;letter-spacing:1px;margin-top:7px}
+.viewer{min-height:580px;display:grid;place-items:center;position:relative;perspective:1400px}
+.orbit{position:absolute;width:min(92%,570px);aspect-ratio:1;border-radius:50%;border:1px solid #d8a83b2c;box-shadow:inset 0 0 75px #d8a83b08,0 0 85px #000}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:8%;border:1px solid #ffffff12;border-radius:50%}
+.orbit:after{inset:-8%;border-color:#a71e3230}
+.shadow{position:absolute;bottom:78px;width:58%;height:36px;background:#000;border-radius:50%;filter:blur(17px);box-shadow:0 0 35px 14px #000}
+.model{position:relative;width:min(88%,450px);height:520px;transform-style:preserve-3d;animation:spin 30s linear infinite;z-index:2;filter:drop-shadow(0 24px 23px #000c);touch-action:pan-y;cursor:grab}
+.model:active{cursor:grabbing}
+.model.paused{animation-play-state:paused}
+@keyframes spin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+.core{position:absolute;inset:6% 5%;background:linear-gradient(90deg,#050506,#242426 45%,#080809);clip-path:polygon(28% 2%,42% 0,58% 0,72% 2%,100% 22%,87% 46%,77% 39%,79% 100%,21% 100%,23% 39%,13% 46%,0 22%);transform:translateZ(0);box-shadow:0 0 25px #000}
+.face{position:absolute;inset:0;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform-style:preserve-3d}
+.face img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.face.front{transform:translateZ(4px)}
+.face.back{transform:rotateY(180deg) translateZ(4px)}
+.edge{position:absolute;top:8%;bottom:7%;width:8px;background:linear-gradient(90deg,#050506,#d8a83b,#a71e32,#050506);left:50%;transform:translateX(-50%) rotateY(90deg) translateZ(219px);opacity:.8}
+.controls{position:absolute;bottom:4px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;z-index:5;width:100%}
+button{background:#111;border:1px solid #d8a83b73;color:#f1dfb9;padding:11px 15px;font-size:9px;letter-spacing:1.2px;border-radius:2px;cursor:pointer}
+button:hover{background:#2b2114;border-color:var(--gold)}
+.hint{position:absolute;top:9%;right:1%;writing-mode:vertical-rl;color:#787168;font-size:8px;letter-spacing:2px}
+.caption{position:absolute;bottom:-21px;width:100%;text-align:center;color:#81796f;font-size:8px;letter-spacing:2px;text-transform:uppercase}
+.details{max-width:1100px;margin:28px auto 0;padding:20px 18px;border-top:1px solid #ffffff17;border-bottom:1px solid #ffffff17;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.details strong{font:21px Georgia,serif;font-weight:400}
+.details span{color:var(--gold);font-size:9px;letter-spacing:2px}
+footer{padding:24px clamp(20px,6vw,88px);display:flex;justify-content:space-between;gap:20px;color:#716b62;font-size:9px;letter-spacing:1.7px}
+@media(max-width:900px){.showcase{grid-template-columns:1fr;gap:0}.copy{text-align:center;padding:12px 10px 0}.copy p{margin:auto}.rule{margin:23px auto}.specs{justify-content:center}.viewer{min-height:550px}.model{height:500px;width:min(70%,400px)}}
+@media(max-width:560px){header{height:72px}.nav{display:none}.brand{font-size:9px}.brand b{font-size:11px}main{padding:28px 13px 28px}h1{font-size:36px}.intro{font-size:11px}.copy h2{font-size:35px}.viewer{min-height:445px}.model{width:min(89%,340px);height:410px}.controls{bottom:0;gap:5px}.controls button{padding:10px 9px;font-size:8px}.details{flex-direction:column;text-align:center}.details strong{font-size:19px}footer{flex-direction:column;text-align:center}}
+@media(prefers-reduced-motion:reduce){.model{animation:none}}
 </style>
 </head>
 <body>
 <div class="page">
 <header>
   <div class="brand">UPSI<b>ANAK NEGERI SEMBILAN</b></div>
-  <nav><a href="#koleksi">Koleksi</a><a href="#rekaan">Rekaan</a><a href="#identiti">Identiti</a></nav>
+  <nav class="nav"><a href="#rekaan">Rekaan</a><a href="#identiti">Identiti</a></nav>
 </header>
-<main id="koleksi">
+<main id="rekaan">
   <div class="heading">
     <div class="eyebrow">SEKRETARIAT MAHASISWA • UPSI</div>
-    <h1>ANAK NEGERI <span>SEMBILAN</span> UPSI</h1>
-    <p class="sub">Koleksi baju korporat rasmi — identiti, warisan dan kebanggaan Anak Negeri Sembilan di Universiti Pendidikan Sultan Idris.</p>
-    <div class="rule"></div>
+    <h1>ANAK NEGERI <em>SEMBILAN</em> UPSI</h1>
+    <p class="intro">Baju korporat Anak Negeri Sembilan UPSI — identiti, warisan dan kebanggaan dalam setiap perincian rekaan.</p>
+    <div class="accent"></div>
   </div>
-  <section class="showcase" id="rekaan">
+  <section class="showcase">
     <div class="copy">
-      <div class="kicker">OFFICIAL CORPORATE ATTIRE</div>
-      <h2>Elegan dalam<br><em>Setiap Perincian.</em></h2>
-      <p>Rekaan hitam eksklusif dengan kemasan emas dan merah, kolar berjalur, lencana di bahagian dada serta corak songket pada sisi. Bahagian belakang menampilkan nama Sekretariat Mahasiswa Anak Negeri Sembilan UPSI.</p>
+      <div class="eyebrow">OFFICIAL CORPORATE ATTIRE</div>
+      <h2>Elegan dalam<br><span>Setiap Perincian.</span></h2>
+      <p>Rekaan hitam eksklusif dengan kolar berjalur emas, kemasan merah, lambang pada bahagian dada serta corak songket pada sisi. Bahagian belakang menampilkan nama Sekretariat Mahasiswa Anak Negeri Sembilan UPSI.</p>
+      <div class="rule"></div>
       <div class="specs">
         <div class="spec"><small>WARNA</small><strong>HITAM · EMAS · MERAH</strong></div>
         <div class="spec"><small>GAYA</small><strong>KORPORAT FORMAL</strong></div>
       </div>
     </div>
-    <div class="viewer">
-      <div class="ring"></div><div class="floor"></div>
-      <div class="fallback" id="fallback"><img src="front-shirt.webp" alt="Baju korporat Anak Negeri Sembilan UPSI pandangan hadapan"></div>
+    <div class="viewer" aria-label="Paparan baju korporat 360 darjah">
+      <div class="orbit"></div><div class="shadow"></div>
       <div class="hint">360° PRODUCT VIEW</div>
-      <div id="scene" aria-label="Paparan baju korporat tiga dimensi. Seret untuk memusingkan baju." role="img"></div>
+      <div class="model" id="model">
+        <div class="core"></div>
+        <div class="face front"><img src="./front-shirt.webp?v=4" alt="Baju korporat, pandangan hadapan" draggable="false"></div>
+        <div class="face back"><img src="./back-shirt.webp?v=4" alt="Baju korporat, pandangan belakang" draggable="false"></div>
+        <div class="edge"></div>
+      </div>
       <div class="controls">
         <button id="pause">JEDA PUTARAN</button>
-        <button id="front">PANDANGAN HADAPAN</button>
-        <button id="back">PANDANGAN BELAKANG</button>
+        <button id="front">HADAPAN</button>
+        <button id="back">BELAKANG</button>
         <button id="reset">PUTAR 360°</button>
       </div>
-      <div class="caption">Putaran automatik perlahan • Seret untuk melihat setiap sudut</div>
+      <div class="caption">Putaran automatik perlahan • Seret baju untuk memusingkan</div>
     </div>
   </section>
-  <section class="note" id="identiti">
+  <section class="details" id="identiti">
     <strong>ANAK NEGERI SEMBILAN UPSI</strong>
     <span>WARISAN · PERPADUAN · KEBANGGAAN</span>
   </section>
 </main>
 <footer><span>SEKRETARIAT MAHASISWA ANAK NEGERI SEMBILAN UPSI</span><span>OFFICIAL CORPORATE COLLECTION</span></footer>
 </div>
-<script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js';
-
-const host=document.getElementById('scene');
-const fallback=document.getElementById('fallback');
-const scene=new THREE.Scene();
-const camera=new THREE.PerspectiveCamera(34,1,0.1,30);
-camera.position.set(0,0,4.25);
-const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
-renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
-renderer.outputColorSpace=THREE.SRGBColorSpace;
-renderer.toneMapping=THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure=1.15;
-host.appendChild(renderer.domElement);
-scene.add(new THREE.HemisphereLight(0xf4e8cc,0x17151a,2.0));
-const key=new THREE.DirectionalLight(0xffe3a7,3.1);key.position.set(-2.8,3.7,4);scene.add(key);
-const fill=new THREE.DirectionalLight(0xffffff,1.25);fill.position.set(3,1,-3);scene.add(fill);
-const rim=new THREE.PointLight(0xd49b2f,16,8);rim.position.set(0.2,1.6,-1.2);scene.add(rim);
-
-const garment=new THREE.Group();
-scene.add(garment);
-
-// A shallow, tailored shirt silhouette gives the photo textures a visible 3D edge.
-const silhouette=new THREE.Shape();
-silhouette.moveTo(-0.30,0.78);
-silhouette.quadraticCurveTo(-0.20,0.88,0,0.88);
-silhouette.quadraticCurveTo(0.20,0.88,0.30,0.78);
-silhouette.lineTo(0.43,0.72);
-silhouette.lineTo(0.73,0.42);
-silhouette.lineTo(0.62,0.13);
-silhouette.lineTo(0.48,0.22);
-silhouette.lineTo(0.48,-0.73);
-silhouette.quadraticCurveTo(0,-0.82,-0.48,-0.73);
-silhouette.lineTo(-0.48,0.22);
-silhouette.lineTo(-0.62,0.13);
-silhouette.lineTo(-0.73,0.42);
-silhouette.lineTo(-0.43,0.72);
-silhouette.closePath();
-const edgeGeometry=new THREE.ExtrudeGeometry(silhouette,{depth:0.075,bevelEnabled:true,bevelSegments:3,steps:1,bevelSize:0.012,bevelThickness:0.012});
-edgeGeometry.translate(0,0,-0.0375);
-const edge=new THREE.Mesh(edgeGeometry,new THREE.MeshStandardMaterial({color:0x111113,roughness:0.88,metalness:0.08}));
-garment.add(edge);
-
-const loader=new THREE.TextureLoader();
-const [frontTexture,backTexture]=await Promise.all([
-  loader.loadAsync('front-shirt.webp'),
-  loader.loadAsync('back-shirt.webp')
-]);
-for(const texture of [frontTexture,backTexture]){
-  texture.colorSpace=THREE.SRGBColorSpace;
-  texture.anisotropy=renderer.capabilities.getMaxAnisotropy();
-}
-const clothMaterial=(map)=>new THREE.MeshStandardMaterial({map,transparent:true,alphaTest:0.025,roughness:0.94,metalness:0.01,side:THREE.DoubleSide,depthWrite:false});
-const frontMesh=new THREE.Mesh(new THREE.PlaneGeometry(1.34,1.60),clothMaterial(frontTexture));
-frontMesh.position.z=0.046;
-garment.add(frontMesh);
-const backMesh=new THREE.Mesh(new THREE.PlaneGeometry(1.34,1.60),clothMaterial(backTexture));
-backMesh.position.z=-0.046;
-backMesh.rotation.y=Math.PI;
-garment.add(backMesh);
-garment.rotation.y=-0.13;
-
-function resize(){
-  const w=host.clientWidth,h=host.clientHeight;
-  renderer.setSize(w,h,false);
-  camera.aspect=w/h;
-  camera.updateProjectionMatrix();
-}
-new ResizeObserver(resize).observe(host);resize();
-fallback.style.display='none';
-
-let auto=true,dragging=false,lastX=0,lastY=0,tilt=0;
-const pauseBtn=document.getElementById('pause');
-function setAuto(v){auto=v;pauseBtn.textContent=auto?'JEDA PUTARAN':'SAMBUNG PUTARAN'}
-pauseBtn.addEventListener('click',()=>setAuto(!auto));
-document.getElementById('front').addEventListener('click',()=>{setAuto(false);garment.rotation.y=0;garment.rotation.x=0;});
-document.getElementById('back').addEventListener('click',()=>{setAuto(false);garment.rotation.y=Math.PI;garment.rotation.x=0;});
-document.getElementById('reset').addEventListener('click',()=>{garment.rotation.y=0;garment.rotation.x=0;setAuto(true);});
-renderer.domElement.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;setAuto(false);renderer.domElement.setPointerCapture(e.pointerId);});
-renderer.domElement.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;garment.rotation.y+=dx*0.009;tilt=Math.max(-0.22,Math.min(0.22,tilt+dy*0.002));garment.rotation.x=tilt;});
-renderer.domElement.addEventListener('pointerup',()=>dragging=false);
-renderer.domElement.addEventListener('pointercancel',()=>dragging=false);
-let previous=performance.now();
-function animate(now){
-  requestAnimationFrame(animate);
-  const delta=Math.min((now-previous)/1000,0.05);previous=now;
-  if(auto&&!dragging)garment.rotation.y+=delta*0.105;
-  renderer.render(scene,camera);
-}
-requestAnimationFrame(animate);
+<script>
+(() => {
+ const model=document.getElementById('model');
+ const pause=document.getElementById('pause');
+ const front=document.getElementById('front');
+ const back=document.getElementById('back');
+ const reset=document.getElementById('reset');
+ let paused=false,dragging=false,lastX=0,angle=0;
+ function pauseAtCurrent(){
+   const style=getComputedStyle(model);
+   const matrix=new DOMMatrixReadOnly(style.transform);
+   angle=Math.atan2(matrix.m13,matrix.m11);
+   model.classList.add('paused');
+   model.style.transform='rotateY('+angle+'rad)';
+   paused=true;pause.textContent='SAMBUNG PUTARAN';
+ }
+ pause.addEventListener('click',()=>{
+   if(!paused){pauseAtCurrent();}
+   else {model.style.transform='';model.classList.remove('paused');paused=false;pause.textContent='JEDA PUTARAN';}
+ });
+ function show(deg){paused=true;model.classList.add('paused');model.style.transform='rotateY('+deg+'deg)';pause.textContent='SAMBUNG PUTARAN';}
+ front.addEventListener('click',()=>show(0));
+ back.addEventListener('click',()=>show(180));
+ reset.addEventListener('click',()=>{model.style.transform='';model.classList.remove('paused');paused=false;pause.textContent='JEDA PUTARAN';});
+ model.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;if(!paused)pauseAtCurrent();model.setPointerCapture(e.pointerId);});
+ model.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastX;lastX=e.clientX;angle+=dx*0.009;model.style.transform='rotateY('+angle+'rad)';});
+ model.addEventListener('pointerup',()=>dragging=false);
+ model.addEventListener('pointercancel',()=>dragging=false);
+})();
 </script>
-</body>
-</html>
+</body></html>
