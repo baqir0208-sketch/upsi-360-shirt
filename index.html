@@ -61,6 +61,12 @@ footer{padding:24px clamp(20px,6vw,88px);display:flex;justify-content:space-betw
 @media(max-width:900px){.showcase{grid-template-columns:1fr;gap:0}.copy{text-align:center;padding:12px 10px 0}.copy p{margin:auto}.rule{margin:23px auto}.specs{justify-content:center}.viewer{min-height:550px}.model{height:500px;width:min(70%,400px)}}
 @media(max-width:560px){header{height:72px}.nav{display:none}.brand{font-size:9px}.brand b{font-size:11px}main{padding:28px 13px 28px}h1{font-size:36px}.intro{font-size:11px}.copy h2{font-size:35px}.viewer{min-height:445px}.model{width:min(89%,340px);height:410px}.controls{bottom:0;gap:5px}.controls button{padding:10px 9px;font-size:8px}.details{flex-direction:column;text-align:center}.details strong{font-size:19px}footer{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){.model{animation:none}}
+.viewer.static-view{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;perspective:none}
+.shirt-card{position:relative;min-width:0;min-height:280px;padding:12px;background:linear-gradient(145deg,#171615,#090909);border:1px solid #d8a83b35;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.shirt-card:before{content:"";position:absolute;inset:12px;border:1px solid #ffffff0b;pointer-events:none}
+.shirt-card img{position:relative;display:block;width:100%;height:clamp(280px,42vw,500px);object-fit:contain;object-position:center;filter:drop-shadow(0 16px 18px #000b)}
+.shirt-label{position:relative;z-index:1;color:var(--gold);font-size:10px;font-weight:bold;letter-spacing:2px;margin:8px 0 10px;text-align:center}
+@media(max-width:560px){.viewer.static-view{grid-template-columns:1fr;gap:12px}.shirt-card{min-height:250px}.shirt-card img{height:330px}}
 </style>
 </head>
 <body>
@@ -87,12 +93,8 @@ footer{padding:24px clamp(20px,6vw,88px);display:flex;justify-content:space-betw
         <div class="spec"><small>GAYA</small><strong>KORPORAT FORMAL</strong></div>
       </div>
     </div>
-    <div class="viewer" aria-label="Paparan baju korporat 360 darjah">
-      <div class="orbit"></div><div class="shadow"></div>
-      <div class="hint">360° PRODUCT VIEW</div>
-      <div class="model" id="model">
-        <div class="core"></div>
-        <div class="face front"><img src="data:image/webp;base64,UklGRiYTAABXRUJQVlA4WAoAAAAQAAAAswAA1wAAQUxQSJAJAAABwEZtt2lL
+    <div class="viewer static-view">
+      <div class="shirt-card"><div class="shirt-label">BAHAGIAN HADAPAN</div><img src="data:image/webp;base64,UklGRiYTAABXRUJQVlA4WAoAAAAQAAAAswAA1wAAQUxQSJAJAAABwEZtt2lL
 kr4557lh3kjbtm3btm0HyrZtV6hspG0bEWkzdOac34+4eXHu2quaY0TEBKCY
 YgAEEFFrLWzaWzNTFVSnAKN23RkmGEgzAaQiBBM+8Ah9J2Ds+LUPufSDk6dM
 +tb0X/36fX958SGHbb7WCAAmqEjt+icZfPCrv3t69nvsX5973/fPGIeaNJzE
@@ -202,8 +204,8 @@ JW0uGoPfEHKJO/5FpLfcrGshXD6z8wbGcklgT4Tj+zNhhxAOXSNot/tY4OaX
 S0tgWvC/Xbr8X4OtaxA/c3MeDxDFlyBsKdr6p/4PdOFH2EkqmDe5JJbAufBR
 he8IaA2xioncY3+T61lFWqu2xweptQ1tL4MhBtGTz3swyuh2bMFhj15bCmfH
 xWTgAAA=
-" alt="Baju korporat, pandangan hadapan" draggable="false"></div>
-        <div class="face back"><img src="data:image/webp;base64,UklGRi4RAABXRUJQVlA4WAoAAAAQAAAAsQAA4AAAQUxQSHAJAAABZ8egbRum
+" alt="Baju korporat Anak Negeri Sembilan UPSI bahagian hadapan"></div>
+      <div class="shirt-card"><div class="shirt-label">BAHAGIAN BELAKANG</div><img src="data:image/webp;base64,UklGRi4RAABXRUJQVlA4WAoAAAAQAAAAsQAA4AAAQUxQSHAJAAABZ8egbRum
 CX/g3QEQERkey0gauZOB9AlHkuS2zQbI+f8fJggBTueI/k8AitxGueIZacTe
 MYI4YZbSis3Ggnu4cRczSWqSBLuNUzcJWpuo7ac8h4ITAYCMBi3I1YJiw/Wj
 OKZf9RrSn/Ia0hshzgXqS5Ts2hoMMhJ3AGA1gz9s2449zv5v24/rTqaTZGY6
@@ -345,16 +347,7 @@ mR2Q8zFiKaufJE6+/E/y3iCFlwd+P2rx8la4pqt84wX0AYfIEs5Om0bOIHuk
 j6D13ti6GJfyAIbiihNNwcsfjWWyFXUgYCtJfoy/f6rQ6KNvkblCHaVKxX/Q
 0kR2cv+YMofjoK1+RCO7s9VIKA+id7PsZT7z20fY0THBgB05KndLEeNz3Xbi
 pOY0bWtwCTcqGY0hVONOlGo/X40nBaFPogb2s/gAAAAA
-" alt="Baju korporat, pandangan belakang" draggable="false"></div>
-        <div class="edge"></div>
-      </div>
-      <div class="controls">
-        <button id="pause">JEDA PUTARAN</button>
-        <button id="front">HADAPAN</button>
-        <button id="back">BELAKANG</button>
-        <button id="reset">PUTAR 360°</button>
-      </div>
-      <div class="caption">Putaran automatik perlahan • Seret baju untuk memusingkan</div>
+" alt="Baju korporat Anak Negeri Sembilan UPSI bahagian belakang"></div>
     </div>
   </section>
   <section class="details" id="identiti">
